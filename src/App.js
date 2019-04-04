@@ -42,7 +42,7 @@ const App = () => {
     <div className="App">
       <Header text="Hooked on Movies" />
       <Search search={search} />
-      <p className="App-intro">Made with 💚 AJ</p>
+      <p className="App-intro">Enjoy</p>
       <div className="movies">
         {loading && !errorMessage ? 
           (<span>loading...</span>) :
