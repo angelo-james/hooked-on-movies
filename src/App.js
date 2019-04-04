@@ -38,12 +38,11 @@ const App = () => {
       })
   }
 
-  
   return (
     <div className="App">
       <Header text="Hooked on Movies" />
       <Search search={search} />
-      <p className="App-intro">Sharing a few of our favorite movies</p>
+      <p className="App-intro">Made with 💚 AJ</p>
       <div className="movies">
         {loading && !errorMessage ? 
           (<span>loading...</span>) :
