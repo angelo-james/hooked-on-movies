@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 
 const LikeDislikeButton = () => {
-  const [likeCount, setLikeCount] = useState('');
-  const [dislikeCount, setDislikeCount] = useState([]);
+  const [likeCount, setLikeCount] = useState(100);
+  const [dislikeCount, setDislikeCount] = useState(25);
 
   const clickLikeButton = () => {
-    setLikeCount(+likeCount + 1);
+    setLikeCount(likeCount + 1);
   }
 
   const clickDislikeButton = () => {
-    setDislikeCount(+dislikeCount + 1);
+    setDislikeCount(dislikeCount + 1);
   }
 
   return (
-    <div>
-      <button onClick={clickLikeButton}>Like | {likeCount === '' ? (<span>100</span>) : 100 + likeCount}</button>
-      <button onClick={clickDislikeButton}>Dislike | {dislikeCount === '' ? (<span>25</span>) : 25 + dislikeCount}</button>
+    <div className="mt-1">
+      <button className="btn btn-success mr-1" onClick={clickLikeButton}>Like | {likeCount}</button>
+      <button className="btn btn-danger" onClick={clickDislikeButton}>Dislike | {dislikeCount}</button>
     </div>
   )
 }
