@@ -4,18 +4,14 @@ const LikeDislikeButton = () => {
   const [likeCount, setLikeCount] = useState(100);
   const [dislikeCount, setDislikeCount] = useState(25);
 
-  const clickLikeButton = () => {
-    setLikeCount(likeCount + 1);
-  }
-
-  const clickDislikeButton = () => {
-    setDislikeCount(dislikeCount + 1);
+  const buttonClick = (event) => {
+    event.target.value === 'like' ? setLikeCount(likeCount + 1) : setDislikeCount(dislikeCount + 1);
   }
 
   return (
     <div className="mt-1">
-      <button className="btn btn-success mr-1" onClick={clickLikeButton}>Like | {likeCount}</button>
-      <button className="btn btn-danger" onClick={clickDislikeButton}>Dislike | {dislikeCount}</button>
+      <button value='like' className="btn btn-success mr-1" onClick={buttonClick}>Like | {likeCount}</button>
+      <button value='dislike' className="btn btn-danger" onClick={buttonClick}>Dislike | {dislikeCount}</button>
     </div>
   )
 }
